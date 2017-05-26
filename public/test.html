@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Burger Buddy</title>
+</head>
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<!-- Link to the Bootstrap CDN -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<!-- Google Font -->
+<link href="https://fonts.googleapis.com/css?family=Rammetto+One" rel="stylesheet">
+<!-- jQuery -->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.2.0.js"></script>
+
+<body>
+    <div class="row ">
+        <!-- Column 1 -->
+        <div class="col-sm-6">
+            <!-- Row 1 where results are populated-->
+            <div class="row" id="results-row">
+                <div id="results-div">
+                    <!-- results show here -->
+                    <button type="button" disabled="disabled" class="burger">Burger</button>
+                </div>
+            </div>
+            <!-- Row 2 where input box is displayed-->
+            <div class="row" id="input-box-row">
+                <div class="input-group">
+                    <input type="text" id="text-area" class="form-control">
+                    <br>
+                    <button type="submit" id="submit-button" class="btn btn-default">Submit</button>
+                    <p id="directions">Enter a burger you want to eat then hit the "Submit" button</p>
+                </div>
+            </div>
+            <!-- Row 3 where button is displayed-->
+            <div class="row button-row">
+            </div>
+        </div>
+        <!-- Column 2-->
+        <div class="col-sm-6">
+            <!-- Row 1 where burger image is displayed-->
+            <div class="row" id="image-row">
+                <img class="burger-img" src="assets/img/burger.png">
+            </div>
+            <!-- Row 2 where input box is displayed-->
+            <div class="row label-row">
+                <p class="title">Burger Buddy</h1>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript">
+var burgArray = [];
+
+
+//when you click the submit button...
+$("#submit-button").click(function dothis() {
+
+    //grab the entered text from the texbox
+    var burgerName = $("#text-area").val().trim();
+
+    console.log(burgerName);
+
+    //add burger to "burger" array
+    burgArray.push(burgerName);
+
+    //call new burger function
+    newBurger();
+
+
+    //create new burger
+    function newBurger() {
+        $("#results-div").append("<br>");
+        var newBtn = $("<button>");
+        newBtn.addClass("burger");
+        newBtn.text(burgerName);
+        newBtn.attr("disabled", "disabled");
+        $("#results-div").append(newBtn);
+    }
+
+
+    //clear text-area
+    $("#text-area").val("");
+
+    console.log($("#text-area").val());
+
+
+});
+</script>

@@ -1,0 +1,85 @@
+body{
+
+	background-image: url("../../assets/img/background.png");
+    position: relative;
+}
+
+
+
+.row{
+
+}
+
+.burger-img{
+margin-top: 150px;
+margin-left: 20%;
+width: 300px;
+height: 290px;
+}
+
+.title{
+	font-family: 'Rammetto One', cursive;
+	font-size: 40px;
+	margin-left: 17%;
+	margin-top: 3%;
+	color: maroon;
+}
+
+#input-box-row{
+	margin-top: 10%;
+	margin-left: 40%;
+
+
+}
+#results-div{
+	height: auto;
+	margin-top: 10%;
+	margin-bottom: 5%;
+	margin-left: 30%;
+	border-color: black;
+/* 	background-color: white;
+ */}
+
+.burger{
+	height: 40px;
+	margin-top: 2%;
+	margin-left: 0px;
+	width: 70%;
+	border-radius: 15px;
+	border-width: 1px;
+	margin-left: -5%;
+	background-color: gold;
+	border-color: maroon;
+}
+
+.devoured{
+	height: 40px;
+	margin-top: 2%;
+	margin-left: 0px;
+	width: 70%;
+	border-radius: 15px;
+	border-width: 1px;
+	margin-left: -5%;
+	background-color: grey;
+	border-color: maroon;
+}
+
+#text-area{
+	width: 400px;
+	height: 150px;
+	margin-left: -5%;
+	margin-top: 5%;
+}
+
+#submit-button{
+	margin-top: 7%;
+	width:  100px;
+	margin-left: 27%;
+	background-color: #F4B183; 
+	color: white;
+}
+
+#directions{
+	margin-top: 50px;
+	color: grey;
+}

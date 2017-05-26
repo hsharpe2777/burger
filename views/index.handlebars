@@ -1,0 +1,40 @@
+
+<h2>Ready to be Devoured!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#unless this.devoured}}
+        <button type="button" disabled="disabled" class="burger">{{this.burger_name}}</button>
+		<form action="/{{this.id}}?_method=PUT" method="POST">
+          <input type="hidden" name="devoured" value="true">
+          <button type="submit">Devour!</button>
+        </form>
+
+    {{/unless}}
+  {{/each}}
+</ul>
+
+
+<h2>Devoured!</h2>
+
+<ul>
+  {{#each burgers}}
+    {{#if this.devoured}}
+        <button type="button" disabled="disabled" class="devoured">{{this.burger_name}}</button>
+
+    {{/if}}
+  {{/each}}
+</ul>
+
+
+
+<p id="directions">Enter in a burger in the textbox below</p>
+<form class="create-update-form" action="/" method="POST">
+
+    <input type="text" id="text-area" name="burger_name">
+
+  <button type="submit" id="submit-button" class="btn btn-default">Submit</button>
+</form>
+
+
+
